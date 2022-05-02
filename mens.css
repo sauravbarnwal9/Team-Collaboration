@@ -1,0 +1,43 @@
+#container{
+    display: grid;
+    grid-template-columns: repeat(2,40%);
+    grid-template-rows:700px;
+    gap: 20px;
+   place-content: center;
+   margin: 50px;
+    
+}
+#container>div{
+    
+    place-content: center;
+}
+img{
+    margin-left: 30%;
+    height: 60%;
+    margin-top: 10%;
+}
+#divp{
+    display: flex;
+}
+#divp>p{
+  font-size: xx-large;
+  margin: 5px;
+
+}
+#divp>p:nth-child(1){
+font-weight: bold;
+
+
+}
+#divp>p:nth-child(2){
+color: grey;
+
+}
+h1{
+    font-weight: bold;
+    font-size: xx-large;
+}
+#container>div>p{
+    font-size: x-large;
+    color: grey;
+}

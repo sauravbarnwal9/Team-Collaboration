@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+  width: 400px;
+  /* border: 1px solid red; */
+  box-shadow: rgba(106, 8, 225, 0.35) 0px 5px 15px;
+  margin: 3% auto;
+  padding: 3%;
+  background: white;
+}
+div>img{
+    height: 70px;
+    margin-left: 650px;
+    justify-content: center;
+
+    margin:10px 500px 10px 500px;
+    
+}
+h1{
+    text-align: center;
+}
+input,
+select {
+  display: block;
+  margin: 15px 0px;
+  font-size: 20px;
+  padding: 2%;
+}
+#submit {
+  width: 100%;
+  /* margin: auto; */
+  background-color: rgb(161, 151, 151);
+  color: rgb(88, 16, 222);
+  border: none;
+  border-radius: 5px;
+  
+}
+
+#submit:hover{
+    background-color: rgb(15, 208, 37);
+    color: rgb(144, 0, 255);
+}
+
+    </style>
+</head>
+<body>
+
+    <form id="form">
+        <h1>Sign Up</h1>
+        <p>Full Name</p>
+        <input id="Name" type="text" placeholder="Enter Your Name">
+        <p>Email</p>
+        <input id="Email" type="text" placeholder="Enter Email">
+        <p>Password</p>
+        <input id="Password" type="password" placeholder="Enter Password">
+        <input id="submit" type="submit" name="submit" value="SIGN UP" />
+        <input type="submit" id="submit" name="RETURN" value="RETURN">
+    </form>
+    
+</body>
+</html>
+<script>
+    document.querySelector("#form").addEventListener("submit" , myRule)
+
+    function myRule(){
+        event.preventDefault()
+
+        var name= document.getElementById("Name").value;
+        var email = document.getElementById("Email").value;
+        var pass = document.getElementById("Password").value
+
+        var user = {
+            Name :  name,
+            Email : email,
+            Password : pass,
+        };
+
+        var josn = JSON.stringify(user);
+        localStorage.setItem(user, josn)
+        console.log("user added")
+        
+
+        // pls contact login page
+        // window.location.href ="loginPage.html"
+    }
+</script>
